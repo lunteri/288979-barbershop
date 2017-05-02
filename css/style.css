@@ -1,23 +1,19 @@
 body {
-	font-size: 14px;
-	line-height: 18px;
-	color: #000000;
-	font-weight: bold;
-	font-family: PTSans;
+    font-size: 14px;
+    line-height: 1.2em;
+    font-weight: bold;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    text-transform: uppercase;
+    background: #f8f5f2;
+}
+/* Шрифты */
+.header-breadcrumbs {
+    font-size: 24px;
+    line-height: 1.25em;
 }
 
-.breadcrumbs h1 {
-	font-size: 24px;
-	line-height: 30px;
-	color: #000000;
-	font-weight: bold;
-	font-family: PTSansl
+.header-main {
+    font-size: 30px;
+    line-height: 1.4em;
 }
 
-.main h1 {
-	font-size: 30px;
-	line-height: 42px;
-	color: #000000;
-	font-weight: bold;
-	font-family: PTSans;
-}
