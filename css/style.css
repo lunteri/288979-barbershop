@@ -8,7 +8,14 @@ body {
   padding: 0;
   margin: 0;
   min-width: 960px;
+  background-image: url("img/background/main.png");
+
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Шрифты */
 .header-breadcrumbs {
   font-size: 24px;
@@ -41,24 +48,17 @@ body {
   color: #ffffff;
 }
 
-
-.navigation {
-  min-height: 70px;
+.main-navigation {
   float: left;
   width: 780px;
 }
 
-.logo {
-  width: 140px;
-  display: inline-block;
-  vertical-align: center;
-}
-
-.main-navigation {
-  padding: 0;
+.main-navigation ul {
   margin: 0;
-  font-size: 0;
+  padding: 0;
   list-style: none;
+  font-size: 0;
+  min-height: 78px;
 }
 
 .main-navigation li {
@@ -71,20 +71,48 @@ body {
 .main-navigation a {
   display: block;
   padding: 25px 20px;
+  text-decoration: none;
 }
 
+.main-navigation a:hover {
+  background-color: #242424;
+}
 
-.login-btn {
-  min-height: 70px;
+.user-block {
   float: right;
   max-width: 140px;
-  background: #000000;
+
 }
 
-.login-btn a {
+.login-btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
   text-decoration: none;
   color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 25px 20px;
+  padding-left: 50px;
 }
+
+.login-btn:hover {
+  background-color: #242424;
+}
+
+.login-btn::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  width: 18px;
+  height: 16px;
+  background-image: url("img/sprite.png");
+  background-position: -10px -10px;
+  background-repeat: no-repeat;
+  display: block;
+}
+
 
 
 /*main навигация*/
@@ -149,7 +177,6 @@ body {
   margin-left: 10px;
   font-size: 14px;
   margin-bottom: 45px;
-
 }
 
 .products-item {
@@ -167,7 +194,6 @@ body {
 .products-item a {
   text-decoration: none;
   color: #000000;
-
 }
 
 .products h2 {
@@ -227,6 +253,7 @@ body {
   float: left;
   width: 180px;
   margin-right: 60px;
+  font-size: 0;
 }
 
 .creator {
@@ -262,7 +289,7 @@ body {
 
 /*Левая колонка*/
 
-.col-left {
+.gallery-col-left {
   float: left;
   width: 470px;
   margin-left: 10px;
@@ -285,10 +312,9 @@ body {
   margin-right: 0;
 }
 
-.col-right {
+.gallery-col-right {
   float: right;
   width: 390px;
   margin-right: 10px;
   margin-top: 60px;
 }
-
