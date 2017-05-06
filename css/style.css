@@ -1,10 +1,13 @@
 body {
   font-size: 14px;
-  line-height: 1.2em;
+  line-height: 1.2;
   font-weight: bold;
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-family: "PT Sans Narrow", "Tahoma", sans-serif;
   text-transform: uppercase;
-  background: #f8f5f2;
+  background-color: #f8f5f2;
+  padding: 0;
+  margin: 0;
+  min-width: 960px;
 }
 /* Шрифты */
 .header-breadcrumbs {
@@ -24,38 +27,57 @@ body {
   padding: 0 10px;
 }
 
-.clearfix:after {
+.clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
 /* Шапка сайта */
+
+.main-header {
+  margin-bottom: 60px;
+  background: #000000;
+  color: #ffffff;
+}
+
+
 .navigation {
   min-height: 70px;
   float: left;
   width: 780px;
-  display: inline-block;
 }
 
 .logo {
   width: 140px;
   display: inline-block;
+  vertical-align: center;
 }
 
 .main-navigation {
   padding: 0;
   margin: 0;
+  font-size: 0;
+  list-style: none;
 }
 
 .main-navigation li {
   display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 20px;
 }
+
+.main-navigation a {
+  display: block;
+  padding: 25px 20px;
+}
+
 
 .login-btn {
   min-height: 70px;
   float: right;
-  width: 140px;
+  max-width: 140px;
   background: #000000;
 }
 
@@ -64,10 +86,6 @@ body {
   color: #ffffff;
 }
 
-.main-header {
-  margin-bottom: 60px;
-  background: #000000;
-}
 
 /*main навигация*/
 
@@ -77,6 +95,7 @@ body {
 
 .main-nav li {
   display: inline-block;
+  vertical-align: center;
 }
 
 .main-nav {
@@ -96,6 +115,7 @@ body {
 
 .main-navigation {
   display: inline-block;
+  vertical-align: center;
 }
 
 /*Формы*/
@@ -103,9 +123,6 @@ body {
   float: left;
   width: 220px;
   margin-right: 10px;
-}
-
-.filters input {
 }
 
 .filters label {
@@ -132,6 +149,7 @@ body {
   margin-left: 10px;
   font-size: 14px;
   margin-bottom: 45px;
+
 }
 
 .products-item {
@@ -142,18 +160,19 @@ body {
   vertical-align: top;
 }
 
+.products-item span {
+  text-transform: capitalize;
+}
+
 .products-item a {
   text-decoration: none;
   color: #000000;
+
 }
 
 .products h2 {
   font-size: 14px;
   line-height: 18px;
-  text-transform: none;
-}
-
-.uppercase {
   text-transform: uppercase;
 }
 
@@ -162,6 +181,7 @@ body {
   display: inline-block;
   width: 45px;
   height: 45px;
+  vertical-align: center;
 }
 
 .page-btn-item a {
@@ -173,12 +193,29 @@ body {
   margin-left: 250px;
 }
 
+.page-btn-list li {
+  display: inline-block;
+  vertical-align: center;
+}
+
+.brand,
+.groups {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filters input {
+  display: none;
+}
+
 /*ПОдвал*/
 .main-footer {
   margin-top: 65px;
   padding-top: 60px;
   padding-bottom: 40px;
-  background: #222222;
+  background: #222;
+  color: #ffffff;
 }
 
 .contacts {
@@ -211,6 +248,7 @@ body {
 
 .main-nav-catalog li {
   display: inline-block;
+  vertical-align: center;
 }
 
 .main-nav-catalog a {
@@ -224,7 +262,7 @@ body {
 
 /*Левая колонка*/
 
-.left {
+.col-left {
   float: left;
   width: 470px;
   margin-left: 10px;
@@ -239,6 +277,7 @@ body {
   display: inline-block;
   width: 140px;
   float: left;
+  vertical-align: center;
 }
 
 .bottom img:last-child {
@@ -246,10 +285,10 @@ body {
   margin-right: 0;
 }
 
-.right {
+.col-right {
   float: right;
   width: 390px;
-  margin-left: 10px;
   margin-right: 10px;
   margin-top: 60px;
 }
+

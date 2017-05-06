@@ -2,24 +2,23 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <title>Cредства для ухода</title>
 </head>
 <body>
   <header class="main-header">
     <div class="container clearfix">
-      <!--Класс центровщик-->
-      <nav class="navigation">
-        <!--Класс блочка-->
-        <div class="logo">
-          <a href="/"><img src="img/logo.png" width="111" height="24" alt="Barbershop logo"></a>
-        </div>
-        <ul class="main-navigation">
-          <!--Класс, чтобы работать с li. Делать их блочно-строчными, то, сё.-->
+      <nav class="main-navigation">
+        <ul>
+          <li>
+            <a href="/"><img src="img/Logo.png" width="111" height="24" alt="Barbershop logo"></a>
+          </li>
           <li><a href="#">Информация</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Прайс-лист</a></li>
-          <li><a>Магазин</a></li>
+          <li class="catalog"><a>Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
       </nav>
@@ -75,7 +74,7 @@
       <section class="products">
         <article class="products-item">
           <img src="img/baxter.jpg" width="220" height="165" alt="Набор для путешествий">
-          <a href="#"><h2><span>Набор для путешествий </span><span class="uppercase">«Baxter of California»</span></h2></a>
+          <a href="catalog-item.html"><h2><span>Набор для путешествий </span> «Baxter of California»</h2></a>
           <div class="price-buy">
             <span class="price">2&thinsp;900 руб.</span>
             <a href="#">Купить</a>
@@ -83,7 +82,7 @@
         </article>
         <article class="products-item">
           <img src="img/baxter2.jpg" width="220" height="165" alt="Увлажняющий кондиционер">
-          <a href="#"><h2><span>Увлажняющий кондиционер</span> <span class="uppercase">«Baxter of California»</span></h2></a>
+          <a href="#"><h2><span>Увлажняющий кондиционер</span> «Baxter of California»</h2></a>
           <div class="price-buy">
             <span class="price">750 руб.</span>
             <a href="#">Купить</a>
@@ -91,7 +90,7 @@
         </article>
         <article class="products-item">
           <img src="img/suavecito.jpg" width="220" height="165" alt="Гель для волос">
-          <a href="#"><h2><span>Гель для волос</span> <span class="uppercase">«Suavecito»</span></h2></a>
+          <a href="#"><h2><span>Гель для волос</span> «Suavecito»</h2></a>
           <div class="price-buy">
             <span class="price">290 руб.</span>
             <a href="#">Купить</a>
@@ -99,7 +98,7 @@
         </article>
         <article class="products-item">
           <img src="img/crew.jpg" width="220" height="165" alt="Глина для укладки волос">
-          <a href="#"><h2><span>Глина для укладки волос</span> <span class="uppercase">«American crew»</span></h2></a>
+          <a href="#"><h2><span>Глина для укладки волос</span> «American crew»</h2></a>
           <div class="price-buy">
             <span class="price">300 руб.</span>
             <a href="#">Купить</a>
@@ -107,7 +106,7 @@
         </article>
         <article class="products-item">
           <img src="img/american.jpg" width="220" height="165" alt="Гель для волос">
-          <a href="#"><h2><span>Гель для волос</span> <span class="uppercase">«American crew»</span></h2></a>
+          <a href="#"><h2><span>Гель для волос</span> «American crew»</h2></a>
           <div class="price-buy">
             <span class="price">300 руб.</span>
             <a href="#">Купить</a>
@@ -115,21 +114,21 @@
         </article>
         <article class="products-item">
           <img src="img/baxter3.jpg" width="220" height="165" alt="Набор для бритья">
-          <a href="#"><h2><span>Набор для бритья</span> <span class="uppercase">«Baxter of California»</span></h2></a>
+          <a href="#"><h2><span>Набор для бритья</span> «Baxter of California»</h2></a>
           <div class="price-buy">
             <span class="price">3&thinsp;900 руб.</span>
             <a href="#">Купить</a>
           </div>
         </article>
       </section>
-      <div class="page-btn">
+      <nav class="page-btn">
         <ul class="page-btn-list">
           <li> <a href="#">1</a></li>
           <li> <a class="active">2</a></li>
           <li> <a href="#">3</a></li>
           <li> <a href="#">4</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
   </main>
   <footer class="main-footer">
@@ -143,9 +142,9 @@
       </section>
       <section class="social">
         <p>Давайте дружить!</p>
-        <a class="btn-social btn-vk" href="https://vk.com/feed"></a>
-        <a class="btn-social btn-fb" href="https://www.facebook.com/"></a>
-        <a class="btn-social btn-inst" href="https://www.instagram.com/"></a>
+        <a class="btn-social btn-vk" href="#" title="vk.com">Вконтакте</a>
+        <a class="btn-social btn-fb" href="#" title="facebook.com">Фейсбук</a>
+        <a class="btn-social btn-inst" href="#" title="instagram.com">Инстаграм</a>
       </section>
       <section class="creator">
         <a class="creator-btn" href="https://htmlacademy.ru">htmlacademy.ru</a>
