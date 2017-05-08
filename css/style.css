@@ -8,7 +8,7 @@ body {
   padding: 0;
   margin: 0;
   min-width: 960px;
-  background-image: url("img/background/main.png");
+  background-image: url("../img/backgrounds/main.png");
 
 }
 img {
@@ -18,8 +18,9 @@ img {
 
 /* Шрифты */
 .header-breadcrumbs {
-  font-size: 24px;
-  line-height: 1.25em;
+  font-size: 30px;
+  line-height: 1.4em;
+  margin-top: -7px;
 }
 
 .header-main {
@@ -43,7 +44,7 @@ img {
 /* Шапка сайта */
 
 .main-header {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   background: #000000;
   color: #ffffff;
 }
@@ -72,10 +73,15 @@ img {
   display: block;
   padding: 25px 20px;
   text-decoration: none;
+  color: #ffffff;
 }
 
 .main-navigation a:hover {
   background-color: #242424;
+}
+
+.main-navigation:hover .logo {
+  background-color: #000000;
 }
 
 .user-block {
@@ -93,7 +99,7 @@ img {
   font-size: 16px;
   line-height: 20px;
   padding: 25px 20px;
-  padding-left: 50px;
+  padding-left: 58px;
 }
 
 .login-btn:hover {
@@ -107,12 +113,16 @@ img {
   left: 28px;
   width: 18px;
   height: 16px;
-  background-image: url("img/sprite.png");
-  background-position: -10px -10px;
+  background-image: url("../img/sprite.png");
+  background-position: -10px -94px;
   background-repeat: no-repeat;
   display: block;
+  opacity: 0.3;
 }
 
+.login-btn:hover::before {
+  opacity: 1;
+}
 
 
 /*main навигация*/
@@ -123,7 +133,8 @@ img {
 
 .main-nav li {
   display: inline-block;
-  vertical-align: center;
+  vertical-align: top;
+  padding-right: 15px;
 }
 
 .main-nav {
@@ -131,9 +142,10 @@ img {
   padding: 0;
 }
 
-.main-navigation a {
+.main-nav a {
   text-decoration: none;
   color: #ffffff;
+  padding-right: 18px;
 }
 
 .main-nav a {
@@ -146,11 +158,13 @@ img {
   vertical-align: center;
 }
 
+
 /*Формы*/
 .filters {
   float: left;
   width: 220px;
   margin-right: 10px;
+  margin-top: -10px;
 }
 
 .filters label {
@@ -270,31 +284,36 @@ img {
 /*Навигация каталога*/
 
 .header-breadcrumbs-catalog {
-  margin-bottom: 30px;
+  margin-bottom: 23px;
 }
 
 .main-nav-catalog li {
   display: inline-block;
-  vertical-align: center;
+  vertical-align: top;
+  padding-right: 15px;
+  position: relative;
 }
 
 .main-nav-catalog a {
   text-decoration: none;
   color: #000000;
+  padding-right: 18px;
 }
 
-.main-nav-catalog {
-  padding: 0;
+.main-nav-catalog a:first-child {
+  padding-right: 15px;
 }
 
+.main-nav-catalog .link-grey {
+  color: #aba9a7;
+}
 /*Левая колонка*/
 
 .gallery-col-left {
   float: left;
   width: 470px;
-  margin-left: 10px;
   margin-right: 10px;
-  margin-top: 60px;
+  margin-top: 43px;
   margin-bottom: 50px;
 }
 
@@ -315,6 +334,70 @@ img {
 .gallery-col-right {
   float: right;
   width: 390px;
-  margin-right: 10px;
-  margin-top: 60px;
+  margin-top: 65px;
+}
+
+.art {
+  padding-left: 175px;
+  color: #aeaeae;
+}
+
+.gallery-col-right p {
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    white-space: pre-line;
+}
+
+.link-text {
+  color: #000000;
+  text-decoration: none;
+}
+
+.price-buy {
+  display: inline-block;
+  width: 187px;
+  font-size: 0px;
+  white-space: nowrap;
+  margin-bottom: 61px;
+
+}
+
+.price {
+    display: inline-block;
+    margin-top: 21px;
+    margin-left: 2px;
+    background-color: #e5e5e5;
+    padding: 14px 28px 15px 26px;
+    color: #000000;
+    font-size: 14px;
+
+  }
+
+.price-buy a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+    display: inline-block;
+    font-size: 14px;
+    padding: 13px 17px 14px 17px;
+}
+
+.price-buy a:hover {
+  background-color: #663d15;
+}
+
+.set span {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.set-list {
+    padding-top: 16px;
+    margin-left: -19px;
+    list-style-image: url(../img/icons/ul.png);
+}
+
+.set-list li {
+  margin-bottom: 8px;
 }
