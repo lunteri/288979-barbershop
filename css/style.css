@@ -8,7 +8,7 @@ body {
   padding: 0;
   margin: 0;
   min-width: 960px;
-  background-image: url("img/background/main.png");
+  background-image: url("../img/background/main.png");
 
 }
 img {
@@ -107,8 +107,8 @@ img {
   left: 28px;
   width: 18px;
   height: 16px;
-  background-image: url("img/sprite.png");
-  background-position: -10px -10px;
+  background-image: url("../img/sprite.png");
+  background-position: -10px -94px;
   background-repeat: no-repeat;
   display: block;
 }
@@ -123,7 +123,7 @@ img {
 
 .main-nav li {
   display: inline-block;
-  vertical-align: center;
+  vertical-align: top;
 }
 
 .main-nav {
@@ -143,7 +143,7 @@ img {
 
 .main-navigation {
   display: inline-block;
-  vertical-align: center;
+  vertical-align: top;
 }
 
 /*Формы*/
@@ -207,7 +207,7 @@ img {
   display: inline-block;
   width: 45px;
   height: 45px;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 .page-btn-item a {
@@ -221,7 +221,7 @@ img {
 
 .page-btn-list li {
   display: inline-block;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 .brand,
@@ -275,7 +275,7 @@ img {
 
 .main-nav-catalog li {
   display: inline-block;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 .main-nav-catalog a {
@@ -304,7 +304,7 @@ img {
   display: inline-block;
   width: 140px;
   float: left;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 .bottom img:last-child {
