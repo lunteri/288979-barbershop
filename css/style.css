@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 body {
   font-size: 14px;
   line-height: 1.2;
@@ -45,7 +47,7 @@ img {
 /* Шапка сайта */
 
 .main-header {
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   background: #000000;
   color: #ffffff;
 }
@@ -60,7 +62,7 @@ img {
   padding: 0;
   list-style: none;
   font-size: 0;
-  min-height: 78px;
+  min-height: 72px;
 }
 
 .main-navigation li {
@@ -70,14 +72,35 @@ img {
   line-height: 20px;
 }
 
-.main-navigation a {
-  display: block;
-  padding: 25px 20px;
-  text-decoration: none;
-  color: #ffffff;
+.main-navigation .active {
+  position: relative;
+  background-color: inherit;
 }
 
-.main-navigation a:hover {
+.main-navigation .active a:hover {
+  background: none;
+}
+
+.main-navigation .active::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: -2px;
+  left: 20px;
+  height: 5px;
+  background-color: #ffffff;
+}
+
+.main-navigation a {
+  display: block;
+  padding: 26px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  height: 20px;
+}
+
+.main-navigation a:hover,
+.main-navigation a:active {
   background-color: #242424;
 }
 
@@ -103,7 +126,8 @@ img {
   padding-left: 58px;
 }
 
-.login-btn:hover {
+.login-btn:hover,
+.login-btn:active {
   background-color: #242424;
 }
 
@@ -132,48 +156,107 @@ img {
   background: #f8f5f2;
 }
 
-.main-nav li {
-  display: inline-block;
-  vertical-align: top;
-<<<<<<< HEAD
-=======
-  padding-right: 15px;
->>>>>>> dop
-}
-
 .main-nav {
-  margin-bottom: 60px;
+  margin: 0;
   padding: 0;
+  margin-bottom: 55px;
+  list-style: none;
+}
+
+.main-nav li {
+  position: relative;
+
+  display: inline;
+  padding-right: 40px;
+}
+
+.main-nav li::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 18px;
+
+  width: 7px;
+  height: 7px;
+
+  background-color: #000000;
+  transform: rotate(45deg);
 }
 
 .main-nav a {
-  text-decoration: none;
-  color: #ffffff;
-  padding-right: 18px;
-}
-
-.main-nav a {
-  text-decoration: none;
   color: #000000;
+  text-decoration: none;
 }
 
-.main-navigation {
-  display: inline-block;
-  vertical-align: top;
+.main-nav a:hover {
+  text-decoration: underline;
 }
+
+.main-nav .current {
+  color: #aba9a7;
+}
+
+.main-nav .current::after {
+  display: none;
+}
+
+
+.main-nav-item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav-item li {
+  position: relative;
+
+  display: inline;
+  padding-right: 40px;
+}
+
+.main-nav-item li::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 18px;
+
+  width: 7px;
+  height: 7px;
+
+  background-color: #000000;
+  transform: rotate(45deg);
+}
+
+.main-nav-item a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.main-nav-item a:hover {
+  text-decoration: underline;
+}
+
+.main-nav-item .current {
+  color: #aba9a7;
+}
+
+.main-nav-item .current::after {
+  display: none;
+}
+
 
 
 /*Формы*/
 .filters {
   float: left;
   width: 220px;
-  margin-right: 10px;
-  margin-top: -10px;
 }
 
 .filters label {
   display: block;
-  margin-bottom: 17px;
+  margin-bottom: 22px;
+  position: relative;
+  padding-left: 44px;
 }
 
 .brand {
@@ -181,19 +264,67 @@ img {
 }
 
 .brand legend {
-  margin-bottom: 35px;
+  margin-bottom: 26px;
+  font-size: 24px;
+  line-height: 30px;
+
 }
 
 .groups legend {
-  margin-bottom: 35px;
+  margin-bottom: 27px;
+  font-size: 24px;
+  line-height: 30px;
+  padding-top: 25px;
 }
+
+
+.brand label::before {
+  content: "";
+  height: 18px;
+  width: 18px;
+  border: 1px solid #000000;
+  position: absolute;
+  left: 0px;
+  top: -3px;
+}
+
+.brand input:checked + label::before {
+  background-image: url(../img/sprite.png);
+  background-position: -7px 25px;
+
+}
+
+.groups label::before {
+  content: "";
+  height: 18px;
+  width: 18px;
+  border: 1px solid #000000;
+  position: absolute;
+  border-radius: 50%;
+  left: 1px;
+  top: 1px;
+}
+
+
+.groups input:checked + label::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #000000;
+  border-radius: 50%;
+  left: 7px;
+  top: 7px;
+  z-index: 1000;
+  position: absolute;
+
+}
+
 
 /*Карточки товаров*/
 .products {
-  width: 700px;
+  width: 710px;
   float: right;
-  margin-left: 10px;
-  font-size: 14px;
+  font-size: 0;
   margin-bottom: 45px;
 }
 
@@ -201,45 +332,108 @@ img {
   display: inline-block;
   width: 220px;
   margin-right: 10px;
-  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-bottom: 21px;
   vertical-align: top;
+  background-color: #ffffff;
+  font-size: 14px;
+  box-shadow: 0 0 27px 5px #e1dedb;
 }
+
+.products :nth-of-type(3n) {
+  margin-right: 0;
+}
+
 
 .products-item span {
   text-transform: capitalize;
+  margin: 0;
+  
 }
 
 .products-item a {
   text-decoration: none;
   color: #000000;
+  white-space: pre-line;
+  text-align: left;
+  
+  
 }
 
 .products h2 {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  padding-left: 16px;
 }
+
+.products-item .price-buy {
+  margin: 0;
+  width: 100%;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-transform: uppercase;
+  
+}
+
+.products-item .price {
+    display: inline-block;
+    background-color: #e5e5e5;
+    color: #000000;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 110px;
+    padding: 14px 0;
+}
+
 
 /*Пагинация*/
-.page-btn-item li {
-  display: inline-block;
-  width: 45px;
-  height: 45px;
-  vertical-align: middle;
+
+.page-btn-list a {
+  display: block;
+  min-width: 43px;
+  height: 43px;
+  margin-right: 7px;
+  background-color: #000000;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  list-style-type: none;
+  line-height: 45px;
 }
 
-.page-btn-item a {
-  text-decoration: none;
+
+.page-btn {
+  margin-left: 10px;
+  font-size: 14px;
+  margin-top: 25px;
+}
+
+.page-btn li {
+  list-style-type: none;
+}
+
+.page-btn ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+}
+
+.page-btn-list a:hover {
+  background-color: #663d15;
+}
+
+.page-btn-list .active {
+  background-color: #ffffff;
   color: #000000;
 }
 
-.page-btn {
-  margin-left: 250px;
-}
-
-.page-btn-list li {
-  display: inline-block;
-  vertical-align: middle;
+.page-btn-list .active:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .brand,
@@ -249,46 +443,160 @@ img {
   border: 0;
 }
 
+
 .filters input {
   display: none;
 }
 
+input.form-btn {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+    display: inline-block;
+    font-size: 14px;
+    padding: 16px 25px 10px 34px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: "PT Sans Narrow", "Tahoma", sans-serif;
+    border: none;
+    font-weight: bold;
+  }
+
+input.form-btn:hover {
+  background-color: #663d15;
+}
 /*ПОдвал*/
 .main-footer {
-  margin-top: 65px;
+  margin-top: 3px;
   padding-top: 60px;
   padding-bottom: 40px;
-  background: #222;
+  background-image: url("../img/backgrounds/footer.png");
   color: #ffffff;
+  background-color: #252525;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px 30px 40px -15px #000000;
+}
+
+.main-footer-item {
+  margin-top: 44px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background-image: url("../img/backgrounds/footer.png");
+  color: #ffffff;
+  background-color: #252525;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px 30px 40px -15px #000000;
+
 }
 
 .contacts {
   float: left;
   width: 320px;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: -4px;
+  margin-right: 65px;
+}
+
+.contacts a:hover {
+  text-decoration: none;
 }
 
 .social {
   float: left;
   width: 180px;
   margin-right: 60px;
+  text-align: center;
+}
+
+.social p {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.btn-social {
+  display: inline-block;
+  width: 42px;
+  height: 48px;
+  margin: 0 2px;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
   font-size: 0;
+  vertical-align: top;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+}
+
+.btn-social:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.btn-vk {
+  background-position: -3px -262px;
+}
+
+.btn-vk:hover {
+  background-position: -3px -225px;
+}
+
+.btn-fb {
+  background-position: 4px -38px;
+}
+
+
+.btn-fb:hover {
+  background-position: 4px 2px;
+}
+
+.btn-inst {
+  background-position: 0px -157px;
+}
+
+.btn-inst:hover {
+  background-position: 0px -119px;
 }
 
 .creator {
   float: right;
-  width: 180px;
+}
+
+.creator-btn {
+    background-color: #000000;
+    display: inline-block;
+    font-size: 14px;
+    padding: 13px 22px 14px 24px;
+    margin-top: 35px;
+}
+
+.creator-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.creator p {
+    text-align: center;
+    margin: 0;
+    margin-bottom: -16px;
 }
 
 .main-footer a {
-  text-decoration: none;
   color: #ffffff;
 }
 
+.main-footer-item a {
+  color: #ffffff;
+}
 
 /*Навигация каталога*/
 
 .header-breadcrumbs-catalog {
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 }
 
 .main-nav-catalog li {
@@ -308,17 +616,21 @@ img {
   padding-right: 15px;
 }
 
-.main-nav-catalog .link-grey {
+.main-nav-catalog :last-child a {
   color: #aba9a7;
 }
-/*Левая колонка*/
+
+.main-nav-catalog {
+  padding: 0;
+}
+
+/*Колонки*/
 
 .gallery-col-left {
   float: left;
   width: 470px;
-  margin-right: 10px;
-  margin-top: 43px;
-  margin-bottom: 50px;
+
+  margin-top: 57px;
 }
 
 .bottom img {
@@ -338,7 +650,7 @@ img {
 .gallery-col-right {
   float: right;
   width: 390px;
-  margin-top: 65px;
+  margin-top: 79px;
 }
 
 .art {
@@ -351,6 +663,10 @@ img {
     font-size: 14px;
     line-height: 24px;
     white-space: pre-line;
+}
+
+.gallery-col-left img {
+  box-shadow: 0 0 27px 5px #e1dedb;
 }
 
 .link-text {
@@ -375,6 +691,7 @@ img {
     padding: 14px 28px 15px 26px;
     color: #000000;
     font-size: 14px;
+    text-transform: uppercase;
 
   }
 
@@ -384,10 +701,11 @@ img {
     background-color: #000000;
     display: inline-block;
     font-size: 14px;
-    padding: 13px 17px 14px 17px;
+    padding: 13px 18px 14px 18px;
 }
 
-.price-buy a:hover {
+.price-buy:hover a,
+.price-buy:active a {
   background-color: #663d15;
 }
 
@@ -396,12 +714,210 @@ img {
     line-height: 30px;
 }
 
-.set-list {
-    padding-top: 16px;
-    margin-left: -19px;
-    list-style-image: url(../img/icons/ul.png);
+.set-list li {
+  position: relative;
+  margin-bottom: 8px;
+  padding-left: 21px;
+
 }
 
-.set-list li {
-  margin-bottom: 8px;
+.set-list li::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background-color: #000000;
+  transform: rotate(45deg);
+}
+
+.set-list {
+  margin: 30px 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+/*Вход*/
+.modal-content {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  width: 300px;
+  margin-left: -230px;
+  padding: 50px 80px;
+  display: none;
+  color: #000000;
+
+  background: #f8f3f0 url("img/pattern-white.jpg");
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-close {
+  position: absolute;
+  top: 0;
+  right: -34px;
+
+  width: 22px;
+  height: 22px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+
+  width: 19px;
+  height: 3px;
+  background-color: #d0d0d0;
+  border-radius: 1px;
+}
+
+.modal-content-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-content h2 {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-content p {
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.modal-content .login-form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 241px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  padding-right: 40px;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+}
+
+.login-form input:focus {
+  border-color: #663d15;
+}
+
+.login-form input.icon-user {
+  background-image: url("img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: 100% -504px;
+}
+
+.login-form input.icon-password {
+  background-image: url("img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: 100% -45px;
+}
+
+.login-form .restore {
+  float: right;
+
+  color: #000000;
+}
+
+.login-form .btn {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.login-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.login-checkbox {
+  position: relative;
+
+  padding-left: 30px;
+
+  cursor: pointer;
+}
+
+.login-checkbox:hover {
+  color: #663d15;
+}
+
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: -3px;
+  left: 0;
+
+  width: 17px;
+  height: 17px;
+
+  border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 1px;
+
+  width: 15px;
+  height: 2px;
+
+  background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+  transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  transform: rotate(-45deg);
+}
+
+
+
+.btn {
+    display: inline-block;
+    margin-right: 16px;
+    padding: 10px 33px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    vertical-align: top;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #000000;
+    border: none;
+    cursor: pointer;
 }
