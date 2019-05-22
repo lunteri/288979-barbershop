@@ -1,6 +1,6 @@
 # Учебный проект «Барбершоп»
 
-* Студент: [Екатерина Субботина](https://up.htmlacademy.ru/htmlcss/17/user/288979).
+* Студент: [Северская Лун](https://up.htmlacademy.ru/htmlcss/17/user/288979).
 
 ---
 
